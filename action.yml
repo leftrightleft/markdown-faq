@@ -1,11 +1,11 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Markdown FAQ'
+description: 'This action converts your issue to a markdown file for an FAQ'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  issue_context:  # id of input
+    description: 'FAQ Issue'
     required: true
-    default: 'World'
+    default: ''
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.issue_context }}
