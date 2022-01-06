@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ github.event }}
+    - ${{ inputs.who-to-greet }}
