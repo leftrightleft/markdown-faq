@@ -14,7 +14,7 @@ runs:
   image: 'Dockerfile'
   env:
     action: ${{ inputs.action }}
-    # created_at: ${{ inputs.issue_context }}
-    # updated_at: ${{ inputs.issue_context }}
-    # login: ${{ inputs.issue_context }}
-    # body: ${{ inputs.issue_context }}
+    created_at: ${{ inputs.created_at }}
+    updated_at: ${{ inputs.updated_at }}
+    login: ${{ inputs.login }}
+    body: ${{ inputs.body }}
