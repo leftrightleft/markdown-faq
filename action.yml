@@ -12,5 +12,5 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.issue_context }}
+  env:
+    context: ${{ inputs.issue_context }}
