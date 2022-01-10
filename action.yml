@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    context: ${{ inputs.issue_context }}
+    CONTEXT: ${{ inputs.issue_context }}
