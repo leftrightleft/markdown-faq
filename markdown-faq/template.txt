@@ -1,0 +1,14 @@
+---
+title: $title
+datetime:
+  draft: $created
+  published: $updated
+catagories:
+  - Internal
+  - External
+owners:
+  - $creator
+---
+## $title
+
+$body
