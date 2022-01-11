@@ -3,4 +3,4 @@ FROM python:3.10
 
 COPY markdown-faq/ /src/
 WORKDIR /src/
-CMD ["python", "./main.py"]
+CMD ["python", "/src/main.py"]
