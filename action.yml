@@ -12,6 +12,27 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  inputs:
+    action:
+      description: action of the issue (opened or edited)
+      required: true
+      default: ''
+    created_at:
+      description: when the issue was created
+      required: true
+      default: ''
+    updated_at:
+      description: when the issue was updated
+      required: true
+      default: ''
+    login:
+      description: the user that created the issue
+      required: true
+      default: ''
+    body:
+      description: contents of the body
+      required: true
+      default: ''
   env:
     action: ${{ inputs.action }}
     created_at: ${{ inputs.created_at }}
