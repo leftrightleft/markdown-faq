@@ -2,6 +2,10 @@
 name: 'Markdown FAQ'
 description: 'This action converts your issue to a markdown file for an FAQ'
 inputs:
+  title: 
+    description: 'This is the question'
+    required: true
+    default: ''
   action:
     description: 'action of the issue (opened or edited)'
     required: true
@@ -29,6 +33,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
+    title: ${{ inputs.title }}
     action: ${{ inputs.action }}
     created_at: ${{ inputs.created_at }}
     updated_at: ${{ inputs.updated_at }}
