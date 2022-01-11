@@ -33,6 +33,6 @@ owners:
 # print('login', os.environ['login'])
 # print('body', os.environ['body'])
 
-f = open(os.environ['title'], "w")
+f = open(os.environ['title'] + ".md", "w")
 f.write(body)
 f.close()
