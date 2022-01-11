@@ -19,6 +19,6 @@ print('updated', os.environ['updated_at'])
 print('login', os.environ['login'])
 print('body', os.environ['body'])
 
-f = open("demofile2.md", "a")
+f = open("demofile2.md", "w")
 f.write(body)
 f.close()
