@@ -1,13 +1,13 @@
 ---
 title: $title
 datetime:
-  draft: $created
-  published: $updated
+  draft: $created_at
+  published: $updated_at
 catagories:
   - Internal
   - External
 owners:
-  - $creator
+  - $login
 ---
 ## $title
 
