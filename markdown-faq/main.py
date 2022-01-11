@@ -8,7 +8,6 @@ import json
 # context = json.dumps(os.environ)
 body = '''
 ---
-action: {}
 created: {}
 updated: {}
 ---
