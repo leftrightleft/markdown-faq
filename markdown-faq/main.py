@@ -41,7 +41,7 @@ from string import Template
 #     'creator':'creator text'
 #     }
 
-with open('template.txt', 'r') as f:
+with open('/markdown-faq/template.txt', 'r') as f:
     src = Template(f.read())
     result = src.substitute(os.environ)
 
