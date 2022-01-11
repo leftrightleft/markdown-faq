@@ -6,8 +6,7 @@ import json
 # printing environment variables
 # print("printing env vars")
 # context = json.dumps(os.environ)
-body = '''
----
+body = '''---
 title: {}
 version: 1.0
 datetime:
