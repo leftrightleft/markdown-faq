@@ -1,11 +1,9 @@
 ---
 title: $title
 datetime:
-  draft: $created_at
-  published: $updated_at
-catagories:
-  - Internal
-  - External
+  created: $created_at
+  last_updated: $updated_at
+$tags
 owners:
   - $login
 ---
