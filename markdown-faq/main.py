@@ -6,8 +6,9 @@ import yaml
 
 
 def get_tags():
-    print(os.environ['body'])
     tags_string = os.environ['body'].split("### Tags\n\n",1)[1]
+    if len(tags_string) == 0:
+        return 
     tags = tags_string.split(',')
     tags = {'tags':[x.strip(' ') for x in tags]}
     formatted_tags = yaml.dump(tags, default_flow_style=False)
