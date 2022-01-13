@@ -20,6 +20,10 @@ def main():
         src = Template(f.read())
         result = src.substitute(os.environ, tags=tags)
 
+    isExist = os.path.exists(os.environ['directory'])
+    if not isExist:
+        os.makedirs(os.environ['directory'])
+        
     f = open(os.environ['directory'] + os.environ['title'] + ".md", "w")
     f.write(result)
     f.close()
