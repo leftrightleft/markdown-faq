@@ -2,6 +2,10 @@
 name: 'Markdown FAQ'
 description: 'This action converts your issue to a markdown file for an FAQ'
 inputs:
+  directory:
+    description: 'The directory you want your FAQs stored in'
+    required: true
+    default: '/faq/'
   title: 
     description: 'This is the question'
     required: true
