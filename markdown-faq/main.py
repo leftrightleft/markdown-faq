@@ -22,9 +22,9 @@ def main():
         src = Template(f.read())
         result = src.substitute(os.environ, tags=tags)
 
-    isExist = os.path.exists(os.environ['directory'])
+    isExist = os.path.exists(directory)
     if not isExist:
-        os.makedirs(os.environ['directory'])
+        os.makedirs(directory)
 
     f = open('{}/{}.md'.format(directory, os.environ['title']), "w")
     f.write(result)
