@@ -20,7 +20,7 @@ def main():
         src = Template(f.read())
         result = src.substitute(os.environ, tags=tags)
 
-    f = open('.' + os.environ['directory'] + os.environ['title'] + ".md", "w")
+    f = open(os.environ['directory'] + os.environ['title'] + ".md", "w")
     f.write(result)
     f.close()
 
