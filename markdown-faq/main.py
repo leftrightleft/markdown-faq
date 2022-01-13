@@ -16,6 +16,8 @@ def get_tags():
 
 def main():
     tags = get_tags()
+    directory = os.environ['directory'].strip('/')
+
     with open('/markdown-faq/template.txt', 'r') as f:
         src = Template(f.read())
         result = src.substitute(os.environ, tags=tags)
@@ -23,8 +25,8 @@ def main():
     isExist = os.path.exists(os.environ['directory'])
     if not isExist:
         os.makedirs(os.environ['directory'])
-        
-    f = open(os.environ['directory'] + os.environ['title'] + ".md", "w")
+
+    f = open('{}/{}.md'.format(directory, os.environ['title']), "w")
     f.write(result)
     f.close()
 
