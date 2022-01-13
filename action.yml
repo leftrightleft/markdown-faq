@@ -37,6 +37,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
+    directory: ${{ inputs.directory }}
     title: ${{ inputs.title }}
     action: ${{ inputs.action }}
     created_at: ${{ inputs.created_at }}
